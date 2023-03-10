@@ -1,4 +1,10 @@
-// SPDX-License-Identifier: UNLICENSE
+/**
+
+    ✅Twitter :  https://twitter.com/CryptoGuardAI
+    ✅TG :       https://t.me/CryptoGuardAI
+    ✅Github :   https://github.com/CryptoGuardAi
+
+*/
 pragma solidity ^0.8.17;
 
 interface IBEP20 {
@@ -125,10 +131,10 @@ contract CGAI is Context, IBEP20, Ownable {
     uint8 private constant _decimals = 9;
     uint256 private constant MAX = ~uint256(0);
 
-    uint256 private _tTotal = 9 *10**9 * 10**_decimals;
+    uint256 private _tTotal = 100 *10**9 * 10**_decimals;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
 
-    uint256 public swapTokensAtAmount = 1e14 * 10**_decimals;
+    uint256 public swapTokensAtAmount = 1e8 * 10**_decimals;
 
     address public deadWallet = 0x000000000000000000000000000000000000dEaD;
     address public marketingWallet = 0x62b3731a90bA1503941861A58bed5880686229B0;
@@ -141,7 +147,7 @@ contract CGAI is Context, IBEP20, Ownable {
         uint256 marketing;
     }
 
-    Taxes public taxes = Taxes(5, 5);
+    Taxes public taxes = Taxes(3, 5);
 
     struct TotFeesPaidStruct {
         uint256 rfi;
